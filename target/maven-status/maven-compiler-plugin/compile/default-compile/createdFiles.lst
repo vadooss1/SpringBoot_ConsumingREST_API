@@ -1,0 +1,6 @@
+com\vz\domain\Article.class
+com\vz\apiDTO\ResponseObjectDTO.class
+com\vz\apiDTO\RequestParamDTO.class
+com\vz\apiDTO\ConstantsHttp.class
+com\vz\ConsumingRestApplication.class
+com\vz\domain\Source.class
