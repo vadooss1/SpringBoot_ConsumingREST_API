@@ -39,10 +39,12 @@ public class ResponseObjectDTO {
 
     @Override
     public String toString() {
-        return String.format("--------------- \n%-17s%s\n%-17s%s\n%-17s%s\n%-17s%d\n--------------- Article %d\n",
+        return String.format("--------------- \n%-17s%s\n%-17s%s\n%-17s%s\n%-17s%s\n%-17s%s\n%-17s%d\n--------------- Article %d\n",
                 "News title: ", articles[count].getTitle(),
                 "Author: ", articles[count].getAuthor(),
                 "PublishedAt: ", articles[count].getPublishedAt(),
-                "Total results: ", totalResults, count++);
+                "Content: ", articles[count].getContent(),
+                "Url :", articles[count].getUrl(),
+                "Total results: ", totalResults, ++count);
     }
 }
