@@ -30,11 +30,11 @@ public class ConsumingRestApplication {
     }
 
     @Bean
-    public CommandLineRunner run(RestTemplate restTemplate) {
+    public CommandLineRunner run(RestTemplate restTemplate) throws Exception {
         return args -> {
-            ResponseObjectDTO responseObjectDTO = restTemplate.getForObject(requestParamDTO.getRequestLine(), ResponseObjectDTO.class);
+            ResponseObjectDTO responseObjectDTO = restTemplate.getForObject(requestParamDTO.getRequestLineForTopHeadlinesNews(), ResponseObjectDTO.class);
             for (int i = 0; i < articlesAmount; i++) {
-                System.out.println(responseObjectDTO);
+                System.out.println(responseObjectDTO.toStringByArticleIndex(i));
             }
 
             log.info("Request finished !");

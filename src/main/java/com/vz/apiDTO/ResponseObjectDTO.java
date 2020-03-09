@@ -47,4 +47,15 @@ public class ResponseObjectDTO {
                 "Url :", articles[count].getUrl(),
                 "Total results: ", totalResults, ++count);
     }
+
+    public String toStringByArticleIndex(int articleIndex) {
+        return String.format("--------------- Article %d\n%-17s%s\n%-17s%s\n%-17s%s\n%-17s%s\n%-17s%s\n--------------- Article %d\n",
+                articleIndex,
+                "News title: ", articles[articleIndex].getTitle(),
+                "Author: ", articles[articleIndex].getAuthor(),
+                "PublishedAt: ", articles[articleIndex].getPublishedAt(),
+                "Content: ", articles[articleIndex].getContent(),
+                "Url :", articles[articleIndex].getUrl(),
+                articleIndex);
+    }
 }

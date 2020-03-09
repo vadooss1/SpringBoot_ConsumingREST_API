@@ -8,4 +8,5 @@ public class ConstantsHttp {
     public static String pageSize = "pageSize=";
     public static String page = "page=";
     public static String apiKey = "apiKey=";
+    public static String AND = "&";
 }

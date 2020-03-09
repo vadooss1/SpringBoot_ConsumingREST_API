@@ -8,17 +8,21 @@ import static com.vz.apiDTO.ConstantsHttp.*;
 public class RequestParamDTO {
     @Value("${apiUrl}")
     private String baseApiUrl;
-    @Value("${endpoint}")
-    private String endpoint;
+    @Value("${endpointTopHeadlines}")
+    private String endpointTopHeadlines;
+    @Value("${endpointEverything}")
+    private String endpointEverything;
+    @Value("${endpointSources}")
+    private String endpointSources;
     @Value("${countryParam}")
     private String countryParam;
     @Value("${apiKeyParam}")
     private String apiKeyParam;
-    StringBuilder line;
+    private StringBuilder line;
 
-    public String getRequestLine(){
+    public String getRequestLineForTopHeadlinesNews(){
         line = new StringBuilder(baseApiUrl);
-        return line.append(endpoint).append(country).append(countryParam).append('&').
+        return line.append(endpointTopHeadlines).append(country).append(countryParam).append(AND).
                 append(apiKey).append(apiKeyParam).toString();
     }
 
